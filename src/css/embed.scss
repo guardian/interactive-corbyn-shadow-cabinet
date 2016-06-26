@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Guardian Sans Web";
+  src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.eot");
+  src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.svg#GuardianSansWeb-Light") format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Guardian Egyptian Web";
+  src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.eot");
+  src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.svg#GuardianEgyptianWeb-Semibold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal; }
+
+html,
+body {
+
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.interactive-embed {
+
+	max-width: 860px;
+}
+
+
+.labour-header {
+	
+	h2 {
+		font-family: 'Guardian Egyptian Web', Georgia;
+		font-size: 24px;
+		padding: 0;
+		margin: 0;
+	}
+	padding: 5px 0;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.labour-footer {
+	font-family: 'Guardian Text Sans Web', Arial;
+	font-size: 12px;
+	line-height: 12px;
+	padding: 4px 0;
+	border-top: 1px solid #eaeaea;
+	color: #767676;
+
+}
+
+.labour-key {
+	position: absolute;
+	top: 0;
+	left: 3px;
+	max-width: 33%;
+}
+
+.labour-status {
+	display: block;
+	
+	line-height: 15px;
+	margin-bottom: 10px;
+
+}
+
+.labour-dot {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: red;
+	border-radius: 100px;
+
+	&.Back {
+		background-color: #53c6db;
+	}
+
+	&.Gone {
+		background-color: #fdb82b;
+	}
+}
+
+.labour-label {
+	margin-left: 20px;
+	font-family: 'Guardian Text Sans Web', Arial;
+	font-size: 14px;
+	line-height: 15px;
+	vertical-align: top;
+	color: #767676;
+	display: inline-block;
+
+}
+
+
+.labour-people{
+	font-size: 0;
+	margin: 10px 0 0 0 ;
+	position: relative;
+}
+
+.person {
+	width: 33%;
+	padding: 5px;
+	font-size: 14px;
+	
+	display: inline-block;
+	vertical-align: top;
+
+	@media (min-width: 400px) {
+		width: 25%;
+	}
+
+	@media (min-width: 520px) {
+		width: calc(100%/6);
+	}
+
+	@media (min-width: 860px) {
+		width: calc(100%/10);
+	}
+}
+
+
+
+
+
+.person-name {
+	font-family: 'Guardian Text Sans Web', Arial;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #767676;
+
+	@media (min-width: 600px) {
+		font-size: 14px;
+	}
+}
+
+.person-img {
+	position: relative;
+	line-height: 0;
+	&.status-Gone::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 100px;
+		background: rgba(253,184,43, 0.50);
+	}
+
+	&.status-Back::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 100px;
+		background: rgba(83,198,219, 0.50);
+	}
+
+	&.status-::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 100px;
+		background: rgba(255,255,255, 0.50);
+	}
+	
+
+	img {
+
+		width: 100%;
+		border-radius: 100px;
+
+	}
+}
+
+
+.labour-leader {
+	display: block;
+	margin: 0 auto;
+
+	width: 40%;
+
+	@media (min-width: 400px) {
+		width: 33%;
+	}
+
+	@media (min-width: 520px) {
+		width: calc(100%/4.5);
+	}
+
+	@media (min-width: 860px) {
+		width: calc(100%/7);
+	}
+}
+
+
+
+
+

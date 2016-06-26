@@ -1,0 +1,44 @@
+
+
+<div class='labour-header'>
+	<h2>Corbyn's shadow cabinet</h2>
+</div>
+
+
+
+<div class='labour-people'>
+
+	{{#each people}}
+
+		{{#if @first}}
+		<div class='labour-key'>
+			<div class='labour-status'>
+				<div class='labour-dot Gone'></div>
+				<div class='labour-label'>Sacked or resigned</div>
+			</div>
+
+			<div class='labour-status'>
+				<div class='labour-dot Back'></div>
+				<div class='labour-label'>Backs Corbyn</div>
+			</div>
+
+		</div>
+
+		{{/if}}
+
+
+
+		<div class='person {{#if @first}}labour-leader{{/if}}'>
+			
+			<div class='person-img status-{{status}} '>
+				<img src='%assetPath%/assets/imgs/{{image}}.jpg'>
+			</div>
+			<div class='person-name'>{{name}}</div>
+		</div>
+
+	{{/each}}
+
+
+</div>
+
+<div class='labour-footer'>Images: PA, AFP, Getty, PA, REX, News Pictures, Guardian</div>
