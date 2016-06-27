@@ -8,35 +8,65 @@
 
 <div class='labour-people'>
 
-	{{#each people}}
 
-		{{#if @first}}
-		<div class='labour-key'>
-			<div class='labour-status'>
-				<div class='labour-dot Gone'></div>
-				<div class='labour-label'>Sacked or resigned</div>
-			</div>
-
-			<div class='labour-status'>
-				<div class='labour-dot Back'></div>
-				<div class='labour-label'>Backs Corbyn</div>
-			</div>
-
+	<div class='labour-key'>
+		<div class='labour-status'>
+			<div class='labour-dot moved_role'></div>
+			<div class='labour-label'>Promoted</div>
 		</div>
 
+		<div class='labour-status'>
+			<div class='labour-dot new'></div>
+			<div class='labour-label'>New appointment</div>
+		</div>
+
+		<div class='labour-status'>
+			<div class='labour-dot Back'></div>
+			<div class='labour-label'>Backs Corbyn</div>
+		</div>
+
+		<div class='labour-status'>
+			<div class='labour-dot Gone'></div>
+			<div class='labour-label'>Sacked or resigned</div>
+		</div>
+
+	</div>
+
+
+
+	{{#each new_cabinet}}
+
+		{{#if name}}
+			<div class='person'>
+				
+				<div class='person-img status-{{new_status}} '>
+					<img src='%assetPath%/assets/imgs/{{image}}.jpg'>
+				</div>
+				<div class='person-name'>{{name}}</div>
+			</div>
 		{{/if}}
 
-
-
-		<div class='person {{#if @first}}labour-leader{{/if}}'>
-			
-			<div class='person-img status-{{status}} '>
-				<img src='%assetPath%/assets/imgs/{{image}}.jpg'>
-			</div>
-			<div class='person-name'>{{name}}</div>
-		</div>
-
 	{{/each}}
+
+	<div class='resigned'>
+
+		{{#each gone}}
+
+			
+
+			{{#if name}}
+				<div class='person'>
+					
+					<div class='person-img status-{{status}} '>
+						<img src='%assetPath%/assets/imgs/{{image}}.jpg'>
+					</div>
+					<div class='person-name'>{{name}}</div>
+				</div>
+			{{/if}}
+
+		{{/each}}
+
+	</div>
 
 
 </div>
