@@ -19,7 +19,15 @@ window.init = function init(el, config) {
 
 
 function render(data, el, config){
-
+    Handlebars.registerHelper({
+        'getImg': function(image, opts) {
+            if(image.indexOf('https') > -1){
+                return image;
+            } else {
+                return config.assetPath + '/assets/imgs/' + image + '.jpg'
+            }
+        }
+    });
 
 
   	var content = Handlebars.compile( 

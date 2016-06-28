@@ -25,9 +25,16 @@
 			<div class='labour-label'>Backs Corbyn</div>
 		</div>
 
+		
+
 		<div class='labour-status'>
 			<div class='labour-dot Gone'></div>
 			<div class='labour-label'>Sacked or resigned</div>
+		</div>
+
+		<div class='labour-status'>
+			<div class='labour-dot Unable'></div>
+			<div class='labour-label'>Cannot resign but say they won't attend under Corbyn</div>
 		</div>
 
 	</div>
@@ -37,13 +44,15 @@
 	{{#each new_cabinet}}
 
 		{{#if name}}
+			{{#if image}}
 			<div class='person'>
 				
 				<div class='person-img status-{{new_status}} '>
-					<img src='%assetPath%/assets/imgs/{{image}}.jpg'>
+					<img src='{{getImg image}}'>
 				</div>
 				<div class='person-name'>{{name}}</div>
 			</div>
+			{{/if}}
 		{{/if}}
 
 	{{/each}}
@@ -55,13 +64,15 @@
 			
 
 			{{#if name}}
-				<div class='person'>
-					
-					<div class='person-img status-{{status}} '>
-						<img src='%assetPath%/assets/imgs/{{image}}.jpg'>
+				{{#if image}}
+					<div class='person'>
+						
+						<div class='person-img status-{{status}} '>
+							<img src='%assetPath%/assets/imgs/{{image}}.jpg'>
+						</div>
+						<div class='person-name'>{{name}}</div>
 					</div>
-					<div class='person-name'>{{name}}</div>
-				</div>
+				{{/if}}
 			{{/if}}
 
 		{{/each}}
