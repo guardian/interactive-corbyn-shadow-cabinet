@@ -1,25 +1,25 @@
 
 
-<div class='labour-header'>
-	<h2>Corbyn's shadow cabinet</h2>
+<div class='party-header'>
+	<h2>Testing shadow cabinet</h2>
 </div>
 
 
 
-<div class='labour-people'>
-
-	{{#each people}}
+<div class='party-people'>
+	
+	{{#each new_cabinet}}
 
 		{{#if @first}}
-		<div class='labour-key'>
-			<div class='labour-status'>
-				<div class='labour-dot Gone'></div>
-				<div class='labour-label'>Sacked or resigned</div>
+		<div class='party-key'>
+			<div class='party-status'>
+				<div class='party-dot Gone'></div>
+				<div class='party-label'>Sacked or resigned</div>
 			</div>
 
-			<div class='labour-status'>
-				<div class='labour-dot Back'></div>
-				<div class='labour-label'>Backs Corbyn</div>
+			<div class='party-status'>
+				<div class='party-dot Back'></div>
+				<div class='party-label'>Backs Corbyn</div>
 			</div>
 
 		</div>
@@ -28,7 +28,7 @@
 
 
 
-		<div class='person {{#if @first}}labour-leader{{/if}}'>
+		<div class='person {{#if @first}}party-leader{{/if}}'>
 			
 			<div class='person-img status-{{status}} '>
 				<img src='%assetPath%/assets/imgs/{{image}}.jpg'>
@@ -41,4 +41,4 @@
 
 </div>
 
-<div class='labour-footer'>Images: PA, AFP, Getty, PA, REX, News Pictures, Guardian</div>
+<div class='party-footer'>Images: PA, AFP, Getty, PA, REX, News Pictures, Guardian</div>
