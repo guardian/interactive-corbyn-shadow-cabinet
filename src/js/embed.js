@@ -8,7 +8,7 @@ window.init = function init(el, config) {
 
 
     reqwest({
-        url: 'https://interactive.guim.co.uk/docsdata-test/1urZ2IT9O8rXiDUIMHUTKwqA_IAN35R46vuGQg1xXlTE.json',
+        url: 'https://interactive.guim.co.uk/docsdata-test/1LoUxmgThGOAbAG6Ankf3iTUV1WeE2ctmgkyFl1EzE3Y.json',
         type: 'json',
         crossOrigin: true,
         success: function(data){
