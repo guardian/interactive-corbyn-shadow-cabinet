@@ -8,7 +8,7 @@ window.init = function init(el, config) {
 
 
     reqwest({
-        url: 'https://interactive.guim.co.uk/docsdata-test/1vuTBpR0sHESNI05VPzzbg_Njfn9HWeVEQbW4deM4Hoo.json',
+        url: 'https://interactive.guim.co.uk/docsdata-test/1urZ2IT9O8rXiDUIMHUTKwqA_IAN35R46vuGQg1xXlTE.json',
         type: 'json',
         crossOrigin: true,
         success: function(data){
@@ -32,3 +32,6 @@ function render(data, el, config){
   	
   	el.innerHTML = content(data.sheets);
 }
+
+// conservative use this data url: 'https://interactive.guim.co.uk/docsdata-test/1urZ2IT9O8rXiDUIMHUTKwqA_IAN35R46vuGQg1xXlTE.json',
+// conservative use this in cfg/s3.json  "path": "2016/06/conservative-party-shadow-cabinet" 
