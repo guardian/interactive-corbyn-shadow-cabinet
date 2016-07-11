@@ -1,7 +1,7 @@
 
 
 <div class='labour-header'>
-	<h2>Corbyn's shadow cabinet</h2>
+	<h2>Theresa May's first cabinet</h2>
 </div>
 
 
@@ -47,10 +47,11 @@
 			{{#if image}}
 			<div class='person'>
 				
-				<div class='person-img status-{{new_status}} '>
+				<div class='person-img status-{{new_status}}'>
 					<img src='{{getImg image}}'>
 				</div>
 				<div class='person-name'>{{name}}</div>
+				<div class='person-position'>{{position}}</div>
 			</div>
 			{{/if}}
 		{{/if}}
@@ -59,7 +60,7 @@
 
 	<div class='resigned'>
 
-		{{#each gone}}
+		{{#each previous}}
 
 			
 
@@ -68,9 +69,10 @@
 					<div class='person'>
 						
 						<div class='person-img status-{{status}} '>
-							<img src='%assetPath%/assets/imgs/{{image}}.jpg'>
+							<img src='{{getImg image}}'>
 						</div>
 						<div class='person-name'>{{name}}</div>
+						<div class='person-position'>{{position}}</div>
 					</div>
 				{{/if}}
 			{{/if}}
