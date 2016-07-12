@@ -34,7 +34,7 @@ div {
 }
 
 
-.labour-header {
+.gv-cabinet-header {
 	
 	h2 {
 		font-family: 'Guardian Egyptian Web', Georgia;
@@ -46,7 +46,7 @@ div {
 	border-bottom: 1px solid #eaeaea;
 }
 
-.labour-footer {
+.gv-cabinet-footer {
 	font-family: 'Guardian Text Sans Web', Arial;
 	font-size: 12px;
 	line-height: 12px;
@@ -56,12 +56,12 @@ div {
 
 }
 
-.labour-key {
+.gv-cabinet-key {
 	left: 3px;
 	width: 100%;
 }
 
-.labour-status {
+.gv-cabinet-status {
 	display: inline-block;
 	
 	line-height: 15px;
@@ -70,18 +70,19 @@ div {
 
 }
 
-.labour-dot {
+.gv-cabinet-dot {
 	position: absolute;
 	width: 15px;
 	height: 15px;
 	border-radius: 100px;
 
-	&.new {
-		background: rgba(0,86,137, 0.4);
+	&.brexit {
+	background: rgba(184,34,102, 0.6);
 	}
 
-	&.moved_role {
-		background: rgba(184,34,102, 0.6);
+	&.remain {
+			background: rgba(0,86,137, 0.4);
+		
 	}
 
 	&.Back {
@@ -102,7 +103,7 @@ div {
 	
 }
 
-.labour-label {
+.gv-cabinet-label {
 	margin-left: 20px;
 	font-family: 'Guardian Text Sans Web', Arial;
 	font-size: 14px;
@@ -114,7 +115,7 @@ div {
 }
 
 
-.labour-people{
+.gv-cabinet-people{
 	font-size: 0;
 	margin: 10px 0 0 0 ;
 	position: relative;
@@ -158,10 +159,23 @@ div {
 	}
 }
 
+.person-position {
+	font-family: 'Guardian Text Sans Web', Arial;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #444;
+
+	@media (min-width: 600px) {
+		font-size: 14px;
+	}
+}
+
 .person-img {
 	position: relative;
 	line-height: 0;
-	&.status-moved_role::before {
+	&.status-brexit::after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -170,10 +184,10 @@ div {
 		left: 0;
 		right: 0;
 		border-radius: 100px;
-		background: rgba(184,34,102, 0.4);
+		background: rgba(184,34,102, 0.3);
 	}
 
-	&.status-new::before {
+	&.status-remain::after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -182,10 +196,10 @@ div {
 		left: 0;
 		right: 0;
 		border-radius: 100px;
-		background: rgba(0,86,137, 0.4);
+		background: rgba(0,86,137, 0.25);
 	}
 
-	&.status-existing::before {
+	&.status-existing::after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -197,7 +211,7 @@ div {
 		background: rgba(255,255,255, 0.25);
 	}
 
-	&.status-Back::before {
+	&.status-Back::after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -211,7 +225,7 @@ div {
 
 
 
-	&.status-Gone::before {
+	&.status-Gone::after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -220,10 +234,10 @@ div {
 		left: 0;
 		right: 0;
 		border-radius: 100px;
-		background: rgba(255,206,75, 0.5);
+		background: rgba(255,206,75, 0.3);
 	}
 
-	&.status-Unable::before {
+	&.status-Unable::after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -241,7 +255,8 @@ div {
 	
 
 	img {
-
+		filter: url(#greyed);
+		-webkit-filter: url(#greyed);
 		width: 100%;
 		border-radius: 100px;
 
@@ -249,7 +264,7 @@ div {
 }
 
 
-.labour-leader {
+.gv-cabinet-leader {
 	display: block;
 	margin: 0 auto;
 
@@ -270,7 +285,6 @@ div {
 
 
 .resigned {
-	border-top: 1px solid #eaeaea;
 
 	margin-top: 5px;
 	padding-top: 5px;

@@ -3,12 +3,20 @@ import reqwest from 'reqwest'
 import embedHTML from './text/embed.html!text'
 import Handlebars from 'handlebars';
 
+function getParameterByName( name ) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+var mode = getParameterByName('mode');
+ 
+
 window.init = function init(el, config) {
     iframeMessenger.enableAutoResize();
 
 
     reqwest({
-        url: 'http://interactive.guim.co.uk/docsdata-test/1apoVtkWd-nbLoNMEiopsdoOZK9QHkznOjQrrvuG1Pmk.json',
+        url: 'https://interactive.guim.co.uk/docsdata-test/1apoVtkWd-nbLoNMEiopsdoOZK9QHkznOjQrrvuG1Pmk.json',
         type: 'json',
         crossOrigin: true,
         success: function(data){
@@ -37,6 +45,8 @@ function render(data, el, config){
                         
                         }
                 );
-  	
+  	if (mode) {
+          data.sheets.full = true;
+      };
   	el.innerHTML = content(data.sheets);
 }
