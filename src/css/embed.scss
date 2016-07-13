@@ -1,3 +1,5 @@
+@import '_fonts.scss';
+
 @font-face {
   font-family: "Guardian Sans Web";
   src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.eot");
@@ -147,15 +149,14 @@ div {
 
 
 .person-name {
-	font-family: 'Guardian Text Sans Web', Arial;
-	font-size: 12px;
+	@include fs-textSans(2);
 	text-align: center;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	color: #767676;
 
 	@media (min-width: 600px) {
-		font-size: 14px;
+		@include fs-textSans(3);
 	}
 }
 
