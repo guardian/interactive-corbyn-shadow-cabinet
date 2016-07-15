@@ -256,7 +256,7 @@ div {
 	
 
 	img {
-		filter: url(#greyed);
+		filter: grayscale(100%);
 		-webkit-filter: url(#greyed);
 		width: 100%;
 		border-radius: 100px;
